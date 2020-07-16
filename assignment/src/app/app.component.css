@@ -37,3 +37,7 @@ input {
 .mt-50 {
   margin-top: 50px;
 }
+
+.pointer {
+  cursor: pointer;
+}
