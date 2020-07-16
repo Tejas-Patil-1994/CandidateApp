@@ -1,0 +1,46 @@
+<div class="parent-div">
+  <div class="table-responsive custom-table">
+    <div class="flex-container">
+      <input [(ngModel)]="searchedText" class="form-control" placeholder="Search By Name" />
+    </div>
+    <table class="table border">
+      <thead>
+        <tr>
+          <th scope="col" (click)="sortCandiates('name')">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col" (click)="sortCandiates('joining_date')">Joining Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidateList | search : searchedText: 'name'">
+          <td>{{candidate.name}}</td>
+          <td>{{candidate.department}}</td>
+          <td>{{candidate.joining_date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-responsive custom-table mt-50">
+    <table class="table border">
+      <thead>
+        <tr>
+          <th scope="col">Department</th>
+          <th scope="col">Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let department of departmentList">
+          <td>{{department.name}}</td>
+          <td>{{department.count}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-list">
+      <button type="button" class="btn btn-primary custom-margin" (click)="onExpGreaterClick()">Experience > 2
+        years</button>
+      <button type="button" class="btn btn-primary custom-margin" (click)="removeDevCandidates()">Remove dev
+        candidates</button>
+      <button type="button" class="btn btn-default custom-margin" (click)="onResetClick()">Reset</button>
+    </div>
+  </div>
+</div>

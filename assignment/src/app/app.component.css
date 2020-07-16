@@ -1,0 +1,39 @@
+.button-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.custom-table {
+  width: 40%;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.border {
+  border: 1px solid #ddd;
+}
+
+.parent-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+.custom-margin {
+  margin: 5px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
